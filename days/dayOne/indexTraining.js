@@ -9,8 +9,6 @@ function timeline() {
             let goOne = async function () {
                 let doneDay1 = await trainingDay(); // add promise and resolve
                 if (doneDay1 == "done") {
-                    reset_redCar();
-                    reset_blueCar();
                     studySessionData.doneDay1 = "doneDayOne";
                     studySessionData.expDaysDate = updatedDates.fullDate;
                     platform.saveSession(studySessionData, true)
