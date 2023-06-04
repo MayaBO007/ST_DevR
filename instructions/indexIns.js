@@ -12,6 +12,7 @@ function timeline() {
                     studySessionData.doneInstructions = "doneInstructions";
                     studySessionData.expDaysDate = updatedDates.fullDate;
                     platform.saveSession(studySessionData, true);
+                    platform.goToUrl("instructions/questions/Multiple-Choice-Quiz-JavaScript-master/index.html");
                 } else {
                     moveToDay()
                 }
