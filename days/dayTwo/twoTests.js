@@ -17,6 +17,8 @@ async function start2tests() {
             let startIntervalTest = async function () {
                 let startBeforeStar = await startInterval2Tests();
                 if (startBeforeStar == "done1") {
+                    reset_blueCar();
+                    reset_redCar();
                     setTimeout(() => {
                         document.getElementById("redButton").style.display = "none";
                         document.getElementById("blueButton").style.display = "none";
