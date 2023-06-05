@@ -17,6 +17,7 @@ async function start2tests() {
             let startIntervalTest = async function () {
                 let startBeforeStar = await startInterval2Tests();
                 if (startBeforeStar == "done1") {
+                    clearInterval(sessionInterval2Test);
                     reset_blueCar();
                     reset_redCar();
                     setTimeout(() => {
