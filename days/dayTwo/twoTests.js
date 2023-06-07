@@ -87,6 +87,7 @@ async function start2tests() {
                                                 let startYellow = async function () {
                                                     let endYellowTest = await startIntervalYellow();
                                                     if (endYellowTest == "done4") {
+                                                        clearInterval(sessionIntervalYellow);
                                                         reset_blueCar();
                                                         reset_redCar();
                                                         reset_yellowCar();
