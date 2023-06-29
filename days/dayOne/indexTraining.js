@@ -10,6 +10,8 @@ function timeline() {
                 let doneDay1 = await trainingDay(); // add promise and resolve
                 if (doneDay1 == "done") {
                     clearInterval(sessionIntervalTrainingDay);
+                    reset_redCar();
+                    reset_blueCar();
                     studySessionData.doneDay1 = "doneDayOne";
                     studySessionData.expDaysDate = updatedDates.fullDate;
                     platform.saveSession(studySessionData, true)
