@@ -67,17 +67,14 @@ async function start2tests() {
                                             clearInterval(sessionInterval2Test2);
                                             reset_blueCar();
                                             reset_redCar();
-                                            document.getElementById("redButton").style.display = "none";
-                                            document.getElementById("blueButton").style.display = "none";
                                             setTimeout(() => {
+                                                document.getElementById("redButton").style.display = "none";
+                                                document.getElementById("blueButton").style.display = "none";
                                                 document.getElementById("startYellowTestButton").style.display = "inline";
-                                            }, 1000)
-                                            setTimeout(() => {
-                                                //document.getElementById('iframe-element').classList.remove('hidden');
                                                 document.getElementById("iframe-element").src = "../../timer/timer.html";
                                                 document.getElementById("iframe-element").style.display = "inline";
                                                 document.getElementById("iframe-element").style.top = "18%";
-                                            }, 4000)
+                                            }, 1000)
                                             setTimeout(() => {
                                                 document.getElementById("redButton").style.display = "inline";
                                                 document.getElementById("blueButton").style.display = "inline";
@@ -119,7 +116,7 @@ async function start2tests() {
                                                     }
                                                 }
                                                 startYellow()
-                                            }, 20000)
+                                            }, 17000)
                                         }
 
                                     }
