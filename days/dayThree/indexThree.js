@@ -38,7 +38,7 @@ function timeline() {
                             document.getElementById("gameScreen").style.display = "inline";
                             document.getElementById("startButton").onclick = function () {
                                 document.getElementById("startButton").style.display = "none";
-                                studySessionData.doneDay3 = "stratDayThree";
+                                studySessionData.doneDay3 = "startDayThree";
                                 platform.saveSession(studySessionData, true);
                                 getMillisec();
                                 // msCount();
@@ -83,11 +83,19 @@ function timeline() {
                         goTwo()
                     }
                 } else {
+                    sumCorrectFirstPress()
                     if (window.matchMedia("(orientation: landscape)").matches) {
                         document.getElementById("endOfGame").style.display = "inline";
                     } else {
                         document.getElementById("endOfGame_hor").style.display = "inline";
                     }
+                    const totalWinsNotDone = {
+                        totalBlues: totalBlues,
+                        totalReds: totalReds
+                    }
+                    sumCorrectFirstPress().then(() => {
+                        platform.saveSession(totalWinsNotDone, true);
+                    })
                 }
             });
         });

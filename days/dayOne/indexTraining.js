@@ -37,6 +37,13 @@ function timeline() {
             goOne();
         } else {
             document.getElementById("endOfGame").style.display = "inline";
+            const totalWinsNotDone = {
+                totalBlues: totalBlues,
+                totalReds: totalReds
+            }
+            sumCorrectFirstPress().then(() => {
+                platform.saveSession(totalWinsNotDone, true);
+            })
         }
     })
 }
