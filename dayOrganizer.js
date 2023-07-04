@@ -4,6 +4,10 @@ function moveToDay() {
         getIndexSessionData(data).then((i) => {
             studySessionData = data[i];
 
+            if (studySessionData.subId == "64a1176daa154e67c58b95e4") {
+                platform.goToUrl("days/dayTwo/dayTwo.html");
+            }
+
             if ((typeof studySessionData == "undefined") || (studySessionData.doneInstructions == "")) {
                 platform.goToUrl("instructions/instructions.html");
             } else if (studySessionData.doneDay1 != "doneDayOne") {
