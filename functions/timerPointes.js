@@ -25,16 +25,36 @@ function getMillisec() {
     return milliseconds;
 }
 
+// async function getIndexSessionData(data) {
+//     let i = data.length - 1;
+//     while (i >= 0) {
+//         if (data[i].hasOwnProperty("doneDay1")) {
+//             break;
+//         }
+//         i--;
+//     }
+//     return i;
+// };
+
+let findlastIndex = null;
+let lastTimestamp = null;
+let indexI = null;
+
 async function getIndexSessionData(data) {
-    let i = data.length - 1;
-    while (i >= 0) {
-        if (data[i].hasOwnProperty("doneDay1")) {
-            break;
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].hasOwnProperty("startDate")) {
+            findlastIndex = data[i].createdAt;
+            if (lastTimestamp == null) {
+                lastTimestamp = findlastIndex;
+            } else if (findlastIndex > lastTimestamp) {
+                lastTimestamp = findlastIndex;
+                indexI = i;
+            }
         }
-        i--;
     }
-    return i;
-};
+
+    return indexI;
+}
 
 function dayDate() {
     if (studySessionData.startDate.substring(2, 3) == ":") {
