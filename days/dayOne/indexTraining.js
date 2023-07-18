@@ -6,6 +6,7 @@ function timeline() {
         let updatedDates = updateDates();
         if (updatedDates.fullDate.getDate() == Number(dayDate())) {
             deleteFromSessionData();
+            studySessionData.doneInstructions = "doneInstructions";
             let goOne = async function () {
                 let doneDay1 = await trainingDay(); // add promise and resolve
                 if (doneDay1 == "done") {
