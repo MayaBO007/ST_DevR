@@ -1,6 +1,14 @@
 //let nextClick = null;
 let demoClick = null;
 let qClick = null;
+let studySessionData = {
+    startDate: "",
+    doneInstructions: "",
+    doneDay1: "",
+    doneDay2: "",
+    doneDay3: "",
+    expDaysDate: ""
+};
 async function startFirstDay() {
     return new Promise(resolve => {
         let goOn = async function () {
