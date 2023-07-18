@@ -6,7 +6,7 @@ function moveToDay() {
 
             if ((typeof studySessionData == "undefined") || (studySessionData.doneInstructions == "")) {
                 platform.goToUrl("instructions/instructions.html");
-            } else if (studySessionData.doneDay1 != "doneDayOne") {
+            } else if (studySessionData.doneDay1 != "doneDayOne" || studySessionData.subId == "64a6832daa154e67c58b9719") {
                 if (studySessionData.doneDay1 == "") {
                     platform.goToUrl("days/dayOne/training.html");
                 } else {
