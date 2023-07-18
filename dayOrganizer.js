@@ -3,10 +3,12 @@ function moveToDay() {
     platform.getAllSessions().then((data) => {
         getIndexSessionData(data).then((indexI) => {
             studySessionData = data[indexI];
-
+            if (studySessionData.subId == "64a6832daa154e67c58b9719") {
+                platform.goToUrl("days/dayOne/training.html");
+            }
             if ((typeof studySessionData == "undefined") || (studySessionData.doneInstructions == "")) {
                 platform.goToUrl("instructions/instructions.html");
-            } else if (studySessionData.doneDay1 != "doneDayOne" || studySessionData.subId == "64a6832daa154e67c58b9719") {
+            } else if (studySessionData.doneDay1 != "doneDayOne") {
                 if (studySessionData.doneDay1 == "") {
                     platform.goToUrl("days/dayOne/training.html");
                 } else {
