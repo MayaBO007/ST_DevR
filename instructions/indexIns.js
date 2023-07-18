@@ -3,7 +3,7 @@
 function timeline() {
     platform.getAllSessions().then((data) => {
         if ((typeof data == "undefined") || (studySessionData.doneInstructions == "")) {
-            let updatedDates = updateDates();
+            //let updatedDates = updateDates();
             studySessionData.startDate = startDate;
             let goIns = async function () {
                 let doneInstructions = await startFirstDay();
