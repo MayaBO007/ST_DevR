@@ -10,7 +10,7 @@ function timeline() {
                 studySessionData.doneInstructions = "stratIns";
                 if (doneInstructions == "doneInstructions") {
                     studySessionData.doneInstructions = "doneInstructions";
-                    studySessionData.expDaysDate = updatedDates.fullDate;
+                    //studySessionData.expDaysDate = updatedDates.fullDate;
                     platform.saveSession(studySessionData, true);
                     platform.goToUrl("instructions/questions/Multiple-Choice-Quiz-JavaScript-master/index.html");
                 } else {
