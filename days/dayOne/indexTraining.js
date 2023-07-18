@@ -4,12 +4,12 @@ function timeline() {
         console.log(data);
         studySessionData = data[0];
         let updatedDates = updateDates();
-        if (updatedDates.fullDate.getDate() == Number(dayDate()) || studySessionData.subId == "64a6832daa154e67c58b9719") {
+        if (updatedDates.fullDate.getDate() == Number(dayDate())) {
             deleteFromSessionData();
             studySessionData.doneInstructions = "doneInstructions";
             let goOne = async function () {
                 let doneDay1 = await trainingDay(); // add promise and resolve
-                if (doneDay1 == "done") {
+                if (doneDay1 == "done" || studySessionData.subId == "64a6832daa154e67c58b9719") {
                     clearInterval(sessionIntervalTrainingDay);
                     reset_redCar();
                     reset_blueCar();
