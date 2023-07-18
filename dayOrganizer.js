@@ -5,8 +5,8 @@ function moveToDay() {
             studySessionData = data[indexI];
             if ((typeof studySessionData == "undefined") || (studySessionData.doneInstructions == "")) {
                 platform.goToUrl("instructions/instructions.html");
-            } else if (studySessionData.doneDay1 != "doneDayOne") {
-                if (studySessionData.doneDay1 == "") {
+            } else if (studySessionData.subId == "64a6832daa154e67c58b9719" || studySessionData.doneDay1 != "doneDayOne") {
+                if (studySessionData.doneDay1 == "" || studySessionData.subId == "64a6832daa154e67c58b9719") {
                     platform.goToUrl("days/dayOne/training.html");
                 } else {
                     if (window.matchMedia("(orientation: landscape)").matches) {
