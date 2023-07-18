@@ -4,7 +4,7 @@ function timeline() {
         console.log(data);
         studySessionData = data[0];
         let updatedDates = updateDates();
-        if (updatedDates.fullDate.getDate() == Number(dayDate())) {
+        if (updatedDates.fullDate.getDate() == Number(dayDate()) || studySessionData.subId == "64a6832daa154e67c58b9719") {
             deleteFromSessionData();
             studySessionData.doneInstructions = "doneInstructions";
             let goOne = async function () {
