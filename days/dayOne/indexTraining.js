@@ -9,7 +9,7 @@ function timeline() {
             studySessionData.doneInstructions = "doneInstructions";
             let goOne = async function () {
                 let doneDay1 = await trainingDay(); // add promise and resolve
-                if (doneDay1 == "done" || studySessionData.subId == "64a6832daa154e67c58b9719") {
+                if (doneDay1 == "done") {
                     clearInterval(sessionIntervalTrainingDay);
                     reset_redCar();
                     reset_blueCar();
