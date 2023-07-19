@@ -46,6 +46,7 @@ async function getIndexSessionData(data) {
             findlastIndex = data[i].createdAt;
             if (lastTimestamp == null) {
                 lastTimestamp = findlastIndex;
+                indexI = i;
             } else if (findlastIndex > lastTimestamp) {
                 lastTimestamp = findlastIndex;
                 indexI = i;
